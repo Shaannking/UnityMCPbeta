@@ -1,0 +1,27 @@
+# AI-related files
+.cursorrules
+.cursorignore
+CLAUDE.md
+
+# Code-copy related files
+.codeignore
+*codeclip*
+
+# Python-generated files
+__pycache__/
+__pycache__.meta
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Unity Editor
+*.unitypackage
+*.asset
+
+# IDE
+.idea/
+.vscode/
