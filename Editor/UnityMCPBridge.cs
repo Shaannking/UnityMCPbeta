@@ -305,6 +305,10 @@ namespace UnityMCP.Editor
                     "CREATE_PREFAB" => AssetCommandHandler.CreatePrefab(command.@params),
                     "APPLY_PREFAB" => AssetCommandHandler.ApplyPrefab(command.@params),
                     "GET_ASSET_LIST" => AssetCommandHandler.GetAssetList(command.@params),
+                    //2025.3.24 add ui
+                    "CREATE_UI_BUTTON" => UICommandHandler.CreateUIButton(command.@params),
+                    "CREATE_UI_TEXT" => UICommandHandler.CreateUIText(command.@params),
+                        
                     "EDITOR_CONTROL" => EditorControlHandler.HandleEditorControl(command.@params),
                     _ => throw new Exception($"Unknown command type: {command.type}")
                 };
