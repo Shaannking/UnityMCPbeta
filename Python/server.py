@@ -100,6 +100,12 @@ def asset_creation_strategy() -> str:
         "   - Regularly apply prefab changes\n"
         "   - Monitor console logs for errors and warnings\n"
         "   - Use search terms to filter console output when debugging\n"
+        #2025.3.24 add UI
+         "8. **UI Elements**\n"
+        "   - `create_ui_button(name, position)` - Create a UI Button on the Canvas\n"
+        "   - `create_ui_text(name, content, position)` - Create a UI Text element on the Canvas\n"
+        "   - Position is optional [x, y, z] (in Canvas space)\n"
+        "   - Canvas will be created automatically if needed\n\n"
     )
 
 # Run the server
