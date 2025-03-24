@@ -35,8 +35,8 @@ namespace UnityMCP.Editor.Commands
             { "GET_SELECTED_OBJECT", _ => ObjectCommandHandler.GetSelectedObject() },
 
             // UI management commands
-            { "CREATE_UI_BUTTON", UICommandHandler.CreateUIButton },
-            { "CREATE_UI_TEXT", UICommandHandler.CreateUIText },
+            //{ "CREATE_UI_BUTTON", UICommandHandler.CreateUIButton },
+            //{ "CREATE_UI_TEXT", UICommandHandler.CreateUIText },
 
             // Editor control commands
             { "EDITOR_CONTROL", parameters => EditorControlHandler.HandleEditorControl(parameters) }
