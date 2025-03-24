@@ -1,5 +1,5 @@
 {
-  "name": "com.VRJobs.unityMCP",
+  "name": "com.vrjobs.unitymcp",
   "version": "0.1.4",
   "displayName": "Unity MCP",
   "description": "A Unity package to communicate with a local MCP Client via a Python server.",
