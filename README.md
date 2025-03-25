@@ -1,12 +1,12 @@
 ![image](https://github.com/user-attachments/assets/1610c553-051f-43d2-a308-d0261add843d)
 
-# Unity MCP 包
+# 🤖Unity MCP 包
 
 Unity MCP 包是一个能够实现 Unity 与大型语言模型（如 Claude Desktop）通过模型上下文协议（Model Context Protocol，MCP）进行无缝通信的 Unity 包。该服务器充当桥梁，允许 Unity 向符合 MCP 的工具发送命令并接收响应，使开发者能够自动化工作流程、操作资产并以编程方式控制 Unity 编辑器。
 
 欢迎使用这个开源项目的首次发布版本！无论您是想将大型语言模型整合到 Unity 工作流程中，还是想为这个令人兴奋的新工具做出贡献，我都感谢您抽出时间来了解它！
 
-## 概述
+## 💬概述
 
 Unity MCP 服务器提供了 Unity（通过 C#）和 Python 服务器之间的双向通信通道，实现：
 
@@ -18,11 +18,11 @@ Unity MCP 服务器提供了 Unity（通过 C#）和 Python 服务器之间的�
 
 这个项目非常适合希望利用大型语言模型来增强 Unity 项目或自动化重复任务的开发者。
 
-## 安装
+## 💻安装
 
 要使用 Unity MCP 包，请确保您已安装以下内容：
 
-- Unity 2020.3 LTS 或更新版本（⚠️ 目前仅适用于 URP 项目）
+- Unity 2020.3 LTS 或更新版本（⚠️ 目前仅适用于 URP 项目，推荐直接使用unity6000比较稳定）
 - Python 3.12 或更新版本
 - uv 包管理器
 
@@ -57,7 +57,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 **重要提示**：请务必安装 uv 后再继续。
 
-### 步骤 3：安装 Unity 包
+## 🍊步骤 3：安装 Unity 包
 
 1. 打开 Unity 并转到 Window > Package Manager。
 2. 点击 + 按钮并选择 Add package from git URL。
@@ -65,7 +65,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 安装后，Unity MCP 包将在您的 Unity 项目中可用。当与 Claude Desktop 或 Cursor 等 MCP 客户端一起使用时，服务器将自动启动。
 
-## 功能
+## 🎁功能
 
 - **双向通信**：在 Unity 和大型语言模型之间无缝发送和接收数据。
 - **资产管理**：以编程方式导入资产、实例化预制件和创建新预制件。
@@ -75,7 +75,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 - **编辑器自动化**：自动化 Unity 编辑器任务，如构建项目或进入播放模式。
 
 
-## 故障排除
+## 🤔故障排除
 
 遇到问题？尝试以下解决方法：
 
@@ -90,7 +90,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 如需更多帮助，请访问问题跟踪器或提交新问题。
 
-常见错误：
+⚠️常见错误：
 
 1️⃣unity的urp渲染出问题：建议采用unity6000比较稳定。因为2021有些版本不支持urp的17.0
 
@@ -113,7 +113,8 @@ source $HOME/.local/bin/env
 ```bash
 uv --version
 ```
-正确情况应该显示
+
+正确情况应该显示类似这样的效果：
 uv 0.6.9 (3d9460278 2025-03-20)
 
 4️⃣Claude连接失败？尝试采用衔接方案：
@@ -177,7 +178,7 @@ nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 
 
-演示案例：
+🌞演示案例：
 
 1️⃣草图生成消消乐小游戏：
 
@@ -249,16 +250,14 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 4️⃣未来测试方向：文本生成游戏，图片生成游戏，商品生成游戏，草图生成游戏。场景所有物体信息理解和处理，所有代码文件夹综合分析。
 
 
-## 致谢
+## 🙏致谢
 
 非常感谢所有支持这个项目初始发布的人。特别感谢 Unity Technologies 提供的出色编辑器 API。
 
 祝您编码愉快，享受将大型语言模型与 Unity 集成的过程！
 
 
-## 附录：37个tools工具介绍：
-
-# 37个Unity MCP工具的简介
+## 🔧附录：37个tools工具介绍：
 
 1. **apply_prefab**: 将预制体实例的更改应用回原始预制体资产。
 
