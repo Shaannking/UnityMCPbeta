@@ -74,31 +74,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 - **脚本集成**：在 Unity 中创建、查看和更新 C# 脚本。
 - **编辑器自动化**：自动化 Unity 编辑器任务，如构建项目或进入播放模式。
 
-## 贡献
-
-我很希望您能帮助改进 Unity MCP 服务器！以下是贡献的方法：
-
-### 创建分支
-```
-git checkout -b feature/your-feature-name
-```
-或
-```
-git checkout -b bugfix/your-bugfix-name
-```
-
-### 进行更改
-实现您的功能或修复。
-
-### 提交并推送
-使用清晰、描述性的提交消息：
-```
-git commit -m "Add feature: your feature description"
-git push origin feature/your-feature-name
-```
-
-### 提交拉取请求
-向 master 分支提交一个包含您更改描述的拉取请求。
 
 ## 故障排除
 
@@ -116,6 +91,7 @@ git push origin feature/your-feature-name
 如需更多帮助，请访问问题跟踪器或提交新问题。
 
 常见错误：
+
 1️⃣unity的urp渲染出问题：建议采用unity6000比较稳定。因为2021有些版本不支持urp的17.0
 
 2️⃣unity6000创建项目，名称不能有空格，比如myproject（1）就不行。建议unityMCP这样的格式
@@ -168,8 +144,10 @@ chmod +x ~/unity_mcp_scripts/run_uv.sh
 ```
 
 4. 修改 Claude Desktop 配置文件，或者手动去unity的window-unityMCP，点击Manual手动设置claude文件，注意XXXXXX换成你的用户路径
-   <img width="315" alt="截屏2025-03-24 22 23 04" src="https://github.com/user-attachments/assets/091c30b8-cc01-4819-9e1f-65971f8e49dc" />
 
+<img width="322" alt="截屏2025-03-23 16 23 40" src="https://github.com/user-attachments/assets/2a9757ac-7ee7-45b6-98ed-c71c46365609" />
+
+<img width="1250" alt="截屏2025-03-23 16 21 22" src="https://github.com/user-attachments/assets/da05b8ca-c936-48fc-b2ed-2de0ad6d4a74" />
 
 或者直接输入
 ```bash
@@ -192,6 +170,8 @@ nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
 5. 重启Claude，正确可以用的情况应该是有一个🔌插头按钮，还有右侧锤子🔨显示工具情况：
+
+6. 
 <img width="726" alt="截屏2025-03-23 15 58 52" src="https://github.com/user-attachments/assets/c93e8d30-c440-4110-bc64-8576107ecf4a" />
 <img width="724" alt="截屏2025-03-23 16 00 21" src="https://github.com/user-attachments/assets/4aa533a6-ec4e-42d2-8366-2496e7112b31" />
 
@@ -200,44 +180,62 @@ nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
 演示案例：
 
 1️⃣草图生成消消乐小游戏：
+
 <img width="926" alt="截屏2025-03-22 11 11 26" src="https://github.com/user-attachments/assets/60d41ab3-6d45-45ff-93ee-c81eae07d704" />
 
 提示词：
+
 i want to make a block click game, at the beginning, there are 4 multiple 4 totally 16 blocks, i can use left button click to click any blocks. if i click the green blocks like this picture, the continuous four green blocks will disappear together. and then the system will add an extra four green blocks to fill in the void area. again, if i click the orange blocks, all continuous orange blocks will disappear, and the system will add same number of blocks to fill in. please refer my draft picture, use cube, and use red, orange, yellow, green, blue to make a game.
 
 最终效果
+
 <img width="1420" alt="截屏2025-03-22 11 37 29" src="https://github.com/user-attachments/assets/4cb3be8a-5f35-4f2d-b127-b4cb66597d3b" />
 
 
 2️⃣网络图片一张图复刻积木弹球游戏
+
 ![hq720](https://github.com/user-attachments/assets/0f430a33-f6a2-4d0d-bc53-229103a507fc)
 
 提示词：
+
 in my scene, please refer to this picture, help me use sphere and cube to make a game： Block ball game. I can use the mouse to move the left and right positions of the platform cube below. The gameplay is: at the beginning of the game, there is a small ball on the platform below. When I click the left mouse button, the ball is launched into the air. When the ball hits the colored blocks in the air, those blocks will disappear. Every time a block is hit, one point is scored. The ball returns. I need to shake the mouse to catch the ball with the rectangular cube below and let it catapult into the air again. If I don't catch the ball, the game fails, and a text mesh pro is displayed. When all the blocks in the air disappear, the game is won.
 
 最终效果
+
 <img width="650" alt="截屏2025-03-23 16 11 34" src="https://github.com/user-attachments/assets/ca3757ff-7e6a-4b2a-88af-3a5ee662f01b" />
 
 3️⃣图片复刻3D场景
+
 ![9647d48b-062e-447d-a3c8-db86b3063e7a_Ekran_g_r_nt_s__2025-03-17_004005](https://github.com/user-attachments/assets/c5ccd37e-7974-4677-aeb3-88eb7f663a9d)
 
 提示词：
+
 please refer to this picture and use sphere, cube, and cylinder objects to build a similar scene. you should also make sure the color of each object is same
 
 最终效果
+
 <img width="626" alt="截屏2025-03-23 16 08 13" src="https://github.com/user-attachments/assets/83087fa5-a9f7-4575-b2b8-d32684082c75" />
 
 
 🌟小练习：自己制作一个UI功能MCP：
+
 提示：
+
 1.新建UI功能实现的cs脚本UICommandHandler.cs。在Editor/Commands
+
 2.新建python功能和UI对接的py脚本ui_tools.py
+
 3.更新unity端CommandRegistry.cs和UnityMCPBridge.cs控制代码注册列表
+
 4.更新python端i__init__.py注册列表。在Python/tools文件夹
+
 5.更新server.py服务端协调代码的prompt
 
 
+
 🙋目前不足的地方：
+
+
 1️⃣UI界面的复刻需要用代码实现，不是很方便。效果也不太好
 
 <img width="909" alt="image" src="https://github.com/user-attachments/assets/fd83e8b4-43d0-43f7-a5c4-4aa5b1edc9da" />
@@ -250,16 +248,13 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 
 4️⃣未来测试方向：文本生成游戏，图片生成游戏，商品生成游戏，草图生成游戏。场景所有物体信息理解和处理，所有代码文件夹综合分析。
 
-## 联系方式
-
-有问题或想聊聊这个项目？请联系！
-
 
 ## 致谢
 
 非常感谢所有支持这个项目初始发布的人。特别感谢 Unity Technologies 提供的出色编辑器 API。
 
 祝您编码愉快，享受将大型语言模型与 Unity 集成的过程！
+
 
 ## 附录：37个tools工具介绍：
 
@@ -338,3 +333,6 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 36. **update_script**: 更新现有Unity脚本的内容。
 
 37. **view_script**: 查看Unity脚本文件的内容。
+
+
+
