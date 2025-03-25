@@ -90,6 +90,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 如需更多帮助，请访问问题跟踪器或提交新问题。
 
+
+
 ⚠️常见错误：
 
 1️⃣unity的urp渲染出问题：建议采用unity6000比较稳定。因为2021有些版本不支持urp的17.0
@@ -178,6 +180,7 @@ nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 
 
+
 🌞演示案例：
 
 1️⃣草图生成消消乐小游戏：
@@ -218,6 +221,8 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 <img width="626" alt="截屏2025-03-23 16 08 13" src="https://github.com/user-attachments/assets/83087fa5-a9f7-4575-b2b8-d32684082c75" />
 
 
+
+
 🌟小练习：自己制作一个UI功能MCP：
 
 提示：
@@ -231,6 +236,7 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 4.更新python端i__init__.py注册列表。在Python/tools文件夹
 
 5.更新server.py服务端协调代码的prompt
+
 
 
 
