@@ -117,7 +117,9 @@ git push origin feature/your-feature-name
 
 常见错误：
 1️⃣unity的urp渲染出问题：建议采用unity6000比较稳定。因为2021有些版本不支持urp的17.0
+
 2️⃣unity6000创建项目，名称不能有空格，比如myproject（1）就不行。建议unityMCP这样的格式
+
 3️⃣uv包安装失败，尝试采用
 
 ```
@@ -196,25 +198,32 @@ nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 
 演示案例：
+
 1️⃣草图生成消消乐小游戏：
 <img width="926" alt="截屏2025-03-22 11 11 26" src="https://github.com/user-attachments/assets/60d41ab3-6d45-45ff-93ee-c81eae07d704" />
+
 提示词：
 i want to make a block click game, at the beginning, there are 4 multiple 4 totally 16 blocks, i can use left button click to click any blocks. if i click the green blocks like this picture, the continuous four green blocks will disappear together. and then the system will add an extra four green blocks to fill in the void area. again, if i click the orange blocks, all continuous orange blocks will disappear, and the system will add same number of blocks to fill in. please refer my draft picture, use cube, and use red, orange, yellow, green, blue to make a game.
+
 最终效果
 <img width="1420" alt="截屏2025-03-22 11 37 29" src="https://github.com/user-attachments/assets/4cb3be8a-5f35-4f2d-b127-b4cb66597d3b" />
 
 
 2️⃣网络图片一张图复刻积木弹球游戏
 ![hq720](https://github.com/user-attachments/assets/0f430a33-f6a2-4d0d-bc53-229103a507fc)
+
 提示词：
 in my scene, please refer to this picture, help me use sphere and cube to make a game： Block ball game. I can use the mouse to move the left and right positions of the platform cube below. The gameplay is: at the beginning of the game, there is a small ball on the platform below. When I click the left mouse button, the ball is launched into the air. When the ball hits the colored blocks in the air, those blocks will disappear. Every time a block is hit, one point is scored. The ball returns. I need to shake the mouse to catch the ball with the rectangular cube below and let it catapult into the air again. If I don't catch the ball, the game fails, and a text mesh pro is displayed. When all the blocks in the air disappear, the game is won.
+
 最终效果
 <img width="650" alt="截屏2025-03-23 16 11 34" src="https://github.com/user-attachments/assets/ca3757ff-7e6a-4b2a-88af-3a5ee662f01b" />
 
 3️⃣图片复刻3D场景
 ![9647d48b-062e-447d-a3c8-db86b3063e7a_Ekran_g_r_nt_s__2025-03-17_004005](https://github.com/user-attachments/assets/c5ccd37e-7974-4677-aeb3-88eb7f663a9d)
+
 提示词：
 please refer to this picture and use sphere, cube, and cylinder objects to build a similar scene. you should also make sure the color of each object is same
+
 最终效果
 <img width="626" alt="截屏2025-03-23 16 08 13" src="https://github.com/user-attachments/assets/83087fa5-a9f7-4575-b2b8-d32684082c75" />
 
@@ -230,9 +239,11 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 
 🙋目前不足的地方：
 1️⃣UI界面的复刻需要用代码实现，不是很方便。效果也不太好
+
 <img width="909" alt="image" src="https://github.com/user-attachments/assets/fd83e8b4-43d0-43f7-a5c4-4aa5b1edc9da" />
 
 2️⃣制作积木弹球游戏，他是分别每一个积木单独创建、设置颜色、位置，很麻烦，
+
 <img width="1137" alt="image" src="https://github.com/user-attachments/assets/dae9f5f4-5688-4550-b107-7ba307fcf048" />
 
 3️⃣对于稍微复杂一点的游戏机制，比如动画Animator和Animation设置，物理材质设置还不太智能
@@ -249,3 +260,81 @@ please refer to this picture and use sphere, cube, and cylinder objects to build
 非常感谢所有支持这个项目初始发布的人。特别感谢 Unity Technologies 提供的出色编辑器 API。
 
 祝您编码愉快，享受将大型语言模型与 Unity 集成的过程！
+
+## 附录：37个tools工具介绍：
+
+# 37个Unity MCP工具的简介
+
+1. **apply_prefab**: 将预制体实例的更改应用回原始预制体资产。
+
+2. **attach_script**: 将脚本组件附加到GameObject上。
+
+3. **build**: 为指定平台构建Unity项目。
+
+4. **change_scene**: 切换到不同的场景，可选择是否保存当前场景。
+
+5. **create_object**: 在Unity场景中创建游戏对象(如立方体、球体等)。
+
+6. **create_prefab**: 从场景中的GameObject创建新的预制体资产。
+
+7. **create_script**: 创建新的Unity脚本文件。
+
+8. **delete_object**: 从场景中删除游戏对象。
+
+9. **execute_command**: 在Unity编辑器中执行特定的编辑器命令或自定义脚本。
+
+10. **execute_context_menu_item**: 在给定游戏对象的组件上执行特定的[ContextMenu]方法。
+
+11. **find_objects_by_name**: 通过名称在场景中查找游戏对象。
+
+12. **find_objects_by_tag**: 通过标签在场景中查找游戏对象。
+
+13. **get_asset_list**: 获取项目中的资产列表。
+
+14. **get_available_commands**: 获取可在Unity编辑器中执行的所有可用命令列表。
+
+15. **get_component_properties**: 获取游戏对象上特定组件的属性。
+
+16. **get_hierarchy**: 获取场景中游戏对象的当前层次结构。
+
+17. **get_object_info**: 获取特定游戏对象的信息。
+
+18. **get_object_properties**: 获取指定游戏对象的所有属性。
+
+19. **get_scene_info**: 检索当前Unity场景的详细信息。
+
+20. **get_selected_object**: 获取Unity编辑器中当前选择的游戏对象。
+
+21. **import_asset**: 将资产(如3D模型、纹理)导入Unity项目。
+
+22. **instantiate_prefab**: 在指定位置将预制体实例化到当前场景中。
+
+23. **list_scripts**: 列出指定文件夹中的所有脚本文件。
+
+24. **modify_object**: 修改游戏对象的属性和组件。
+
+25. **new_scene**: 在Unity编辑器中创建新的空场景。
+
+26. **open_scene**: 在Unity编辑器中打开指定的场景。
+
+27. **pause**: 在播放模式下暂停游戏。
+
+28. **play**: 在Unity编辑器中以播放模式启动游戏。
+
+29. **read_console**: 从Unity控制台读取日志消息。
+
+30. **redo**: 重做Unity编辑器中最后撤销的操作。
+
+31. **save_scene**: 将当前场景保存到其文件中。
+
+32. **select_object**: 在Unity编辑器中选择一个游戏对象。
+
+33. **set_material**: 为游戏对象应用或创建材质。
+
+34. **stop**: 停止游戏并退出播放模式。
+
+35. **undo**: 撤销在Unity编辑器中执行的最后一个操作。
+
+36. **update_script**: 更新现有Unity脚本的内容。
+
+37. **view_script**: 查看Unity脚本文件的内容。
